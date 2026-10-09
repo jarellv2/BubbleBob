@@ -18,3 +18,9 @@ The scene is a 2D prototype representing the core gameplay loop of Bubble Bobble
 * **How it was done:** The Player script does not instantiate objects directly. Instead, it calls `BubbleFactory.Instance.CreateBubble()`. The Factory handles the creation, scaling, material coloring (green), and physics application.
 * **Why it was done:** Firing bubbles is the core mechanic. By isolating creation into a Factory, if I later want to implement elemental bubbles (e.g., fire or water bubbles), I only modify the Factory logic. This adheres to the Single Responsibility Principle and keeps the Player class strictly focused on movement.
 
+## Part 5: Future Improvements (With More Time)
+Due to time lost troubleshooting Git repository issues, I had to prioritize the core design patterns over visual polish. With more time, I would add:
+* **User Interface (UI):** I did not have time to set up a Unity Canvas. I would connect the `ScoreManager` to a UI Text element to display the score on-screen instead of just logging it to the console.
+* **Level Progression & Spawning:** Implement a system to transition to new single-screen levels once all enemies in the current room are trapped and popped.
+* **Sprite Integration:** Replace the primitive square and circle placeholders with actual 2D sprites and animations to fully replicate the arcade aesthetic.
+
